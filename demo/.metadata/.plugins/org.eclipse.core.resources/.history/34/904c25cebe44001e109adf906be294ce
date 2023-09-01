@@ -1,0 +1,106 @@
+package com.channel.demo.Model;
+
+import java.sql.Date;
+
+import org.springframework.data.annotation.CreatedDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Channel {
+
+	@CreatedDate
+	public Date date;
+	
+	
+	public long demand_number;
+	
+	public String Channel_name;
+	
+	@Id
+	@GeneratedValue(strategy =GenerationType.AUTO)
+	public long circle_id;
+	
+	public String Circle_name;
+
+	public Channel() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Channel(Date date, long demand_number, String channelname, long channel_id, String channel_name,
+			long circle_id, String circle_name) {
+		super();
+		this.date = date;
+		this.demand_number = demand_number;
+		Channelname = channelname;
+		Channel_id = channel_id;
+		Channel_name = channel_name;
+		this.circle_id = circle_id;
+		Circle_name = circle_name;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public long getDemand_number() {
+		return demand_number;
+	}
+
+	public void setDemand_number(long demand_number) {
+		this.demand_number = demand_number;
+	}
+
+	public String getChannelname() {
+		return Channelname;
+	}
+
+	public void setChannelname(String channelname) {
+		Channelname = channelname;
+	}
+
+	public long getChannel_id() {
+		return Channel_id;
+	}
+
+	public void setChannel_id(long channel_id) {
+		Channel_id = channel_id;
+	}
+
+	public String getChannel_name() {
+		return Channel_name;
+	}
+
+	public void setChannel_name(String channel_name) {
+		Channel_name = channel_name;
+	}
+
+	public long getCircle_id() {
+		return circle_id;
+	}
+
+	public void setCircle_id(long circle_id) {
+		this.circle_id = circle_id;
+	}
+
+	public String getCircle_name() {
+		return Circle_name;
+	}
+
+	public void setCircle_name(String circle_name) {
+		Circle_name = circle_name;
+	}
+	
+	
+	
+	
+	
+}

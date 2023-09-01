@@ -1,0 +1,5 @@
+package com.channel.demo.Repository;
+
+public interface ChannelRepository {
+
+}
